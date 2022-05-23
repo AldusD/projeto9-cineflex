@@ -26,6 +26,7 @@ export default function SessionSelector () {
     // UI
 
     return (
+        <>
         <SessionSelectorDiv>
             <h3>Selecione o horário</h3>
                     {days.map((d, i) => 
@@ -36,12 +37,13 @@ export default function SessionSelector () {
                         date={d.date}
                         showtimes={d.showtimes}
                          />)}
-                
-                <Footer>
-                    <img src={movie.posterURL} />
-                    <p>{movie.title}</p>
-                </Footer>       
+               
         </ SessionSelectorDiv>
+        <Footer>
+            <img src={movie.posterURL} />
+            <p>{movie.title}</p>
+        </Footer>
+        </>
     );
 } 
 
@@ -49,7 +51,7 @@ const SessionSelectorDiv = styled.div`
     font-family: roboto, sans-serif;
     display: flex;
     flex-direction: column;
-    margin-top: 100px;
+    margin: 100px 0 120px 0;
 
     h3 {
         text-align: center;
@@ -65,6 +67,7 @@ const Sessions = styled.div`
 `;
 
 const Footer = styled.div`
+    font-family: roboto, sans-serif;
     background-color: #DFE6ED;
     display: flex;
     width: 100%;
