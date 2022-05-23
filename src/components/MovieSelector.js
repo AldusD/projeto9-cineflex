@@ -16,7 +16,7 @@ export default function MovieSelector() {
     
     // UI
     return (
-        <MovieSelectors>
+        <MovieSelectorDiv>
             <div>
                 <h2>Selecione o filme</h2>
             </div>
@@ -27,11 +27,11 @@ export default function MovieSelector() {
                     id={movie.id}
                     key={i} />)}
             </Movies>            
-        </MovieSelectors>
+        </MovieSelectorDiv>
     );
 }
 
-const MovieSelectors = styled.div`
+const MovieSelectorDiv = styled.div`
     display: flex;
     flex-direction: column;
     align-itens: center;

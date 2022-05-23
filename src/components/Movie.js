@@ -2,17 +2,17 @@ import { Link } from 'react-router-dom';
 
 import styled from 'styled-components';
 
-export default function ({URL, id}) {
+export default function Movie ({URL, id}) {
     return (
         <Link to={'/sessoes/' + id}>
-            <Movie>
-                <img src={URL} />
-            </Movie>
+            <MovieDiv>
+                <img src={URL} alt="Movie" />
+            </MovieDiv>
         </Link>
     );
 }
 
-const Movie = styled.div`
+const MovieDiv = styled.div`
     height: 194px;    
     padding: 8px;
     box-shadow: 0 0 10px 2px #00000080;
